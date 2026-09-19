@@ -80,6 +80,8 @@ main > section.hero {
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  position: sticky;
+  top: 0;
   /* make this banner stick to the top! */
 }
 
@@ -106,6 +108,15 @@ main article {
 main p {
   line-height: 1.75;
   margin-bottom: 48px;;
+}
+
+main > article p:first-of-type::first-letter {
+  font-size: 4rem;
+  float: left;
+  line-height: 0.8;
+  margin-right: 12px;
+  margin-top: 13px;
+
 }
 
 main > article img {
@@ -147,9 +158,29 @@ span.tooltip:focus > span {
 /* styling for tooltip bubble */
 span.tooltip span {
   display: none;
+  position: absolute; 
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  padding: 12px;
+  background-color: var(--text-color);
+  color: var(--white);
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  z-index: 10;
+
 }
 
 /* styling for tooltip bubble arrow */
 span.tooltip span::after {
   content: "";
+  position: absolute;
+  top:100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--text-color) transparent transparent transparent;
 }

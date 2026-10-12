@@ -82,10 +82,11 @@ main > section.hero {
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  position: sticky;
+ 
+  /* make this banner stick to the top! */
+   position: sticky;
   top: 0;
   z-index: 20;
-  /* make this banner stick to the top! */
 }
 
 section.hero > .call-to-action {
@@ -113,6 +114,7 @@ main p {
   margin-bottom: 48px;;
 }
 
+/* Create a drop cap for the first letter of the first p */
 main > article p:first-of-type::first-letter {
   font-size: 4rem;
   font-family: Georgia, serif;
